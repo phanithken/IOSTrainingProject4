@@ -17,12 +17,16 @@ class ViewController: UIViewController {
     
     static var id: Int = Int(arc4random())
     
-    let presenter: Presenter = Presenter()
+    var presenter: Presenter?
 }
 
 extension ViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let router = Router(vc: self)
+        self.presenter = Presenter(router: router)
+        
         self.view.backgroundColor = UIColor.white
         
         self.view.addSubview(label)
@@ -58,8 +62,7 @@ extension ViewController{
 extension ViewController{
     @objc func submit(){
         ViewController.id = ViewController.id + 1
-        presenter.storeRequest(name: textField.text!, id: ViewController.id)
-        self.present(GetViewController(), animated: true, completion: nil)
+        presenter?.storeRequest(name: textField.text!, id: ViewController.id)
     }
 }
 

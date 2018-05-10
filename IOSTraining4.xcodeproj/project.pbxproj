@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		72956893E334F8FDE6D4F906 /* Pods_IOSTraining4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0721F04637B9B9B288EB70CD /* Pods_IOSTraining4.framework */; };
+		B986716D20A4176100DF1799 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B986716C20A4176100DF1799 /* Router.swift */; };
 		B9F3FF2920A3104200B1D885 /* GetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F3FF2820A3104200B1D885 /* GetViewController.swift */; };
 		B9F3FF2B20A3D3C000B1D885 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F3FF2A20A3D3C000B1D885 /* User.swift */; };
 		B9F3FF3220A3D71100B1D885 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F3FF3120A3D71100B1D885 /* Presenter.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		0721F04637B9B9B288EB70CD /* Pods_IOSTraining4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSTraining4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DEC96BBE8FB9144321D4474 /* Pods-IOSTraining4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSTraining4.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSTraining4/Pods-IOSTraining4.debug.xcconfig"; sourceTree = "<group>"; };
+		B986716C20A4176100DF1799 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B9F3FF2820A3104200B1D885 /* GetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetViewController.swift; sourceTree = "<group>"; };
 		B9F3FF2A20A3D3C000B1D885 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B9F3FF3120A3D71100B1D885 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
@@ -51,12 +53,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B9F3FF2C20A3D5D200B1D885 /* Presenter */ = {
+		B986716920A416E600DF1799 /* Scences */ = {
+			isa = PBXGroup;
+			children = (
+				B986716B20A4171E00DF1799 /* GetScence */,
+				B986716A20A4171500DF1799 /* MainScence */,
+			);
+			path = Scences;
+			sourceTree = "<group>";
+		};
+		B986716A20A4171500DF1799 /* MainScence */ = {
 			isa = PBXGroup;
 			children = (
 				B9F3FF3120A3D71100B1D885 /* Presenter.swift */,
+				B9FDFC7C20A2FA9100639863 /* ViewController.swift */,
+				B986716C20A4176100DF1799 /* Router.swift */,
 			);
-			path = Presenter;
+			path = MainScence;
+			sourceTree = "<group>";
+		};
+		B986716B20A4171E00DF1799 /* GetScence */ = {
+			isa = PBXGroup;
+			children = (
+				B9F3FF2820A3104200B1D885 /* GetViewController.swift */,
+			);
+			path = GetScence;
 			sourceTree = "<group>";
 		};
 		B9F3FF2D20A3D5EB00B1D885 /* Data */ = {
@@ -65,15 +86,6 @@
 				B9F3FF2A20A3D3C000B1D885 /* User.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		B9F3FF2E20A3D60400B1D885 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B9F3FF2820A3104200B1D885 /* GetViewController.swift */,
-				B9FDFC7C20A2FA9100639863 /* ViewController.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		B9FDFC6E20A2FA9100639863 = {
@@ -97,9 +109,8 @@
 		B9FDFC7920A2FA9100639863 /* IOSTraining4 */ = {
 			isa = PBXGroup;
 			children = (
-				B9F3FF2E20A3D60400B1D885 /* View */,
+				B986716920A416E600DF1799 /* Scences */,
 				B9F3FF2D20A3D5EB00B1D885 /* Data */,
-				B9F3FF2C20A3D5D200B1D885 /* Presenter */,
 				B9FDFC7A20A2FA9100639863 /* AppDelegate.swift */,
 				B9FDFC8120A2FA9100639863 /* Assets.xcassets */,
 				B9FDFC8620A2FA9100639863 /* Info.plist */,
@@ -234,6 +245,7 @@
 				B9F3FF2920A3104200B1D885 /* GetViewController.swift in Sources */,
 				B9FDFC7D20A2FA9100639863 /* ViewController.swift in Sources */,
 				B9FDFC7B20A2FA9100639863 /* AppDelegate.swift in Sources */,
+				B986716D20A4176100DF1799 /* Router.swift in Sources */,
 				B9F3FF3220A3D71100B1D885 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

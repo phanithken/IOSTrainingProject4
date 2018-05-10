@@ -8,7 +8,13 @@
 
 import RealmSwift
 class Presenter {
+    var router: Router?
+    init(router: Router) {
+        self.router = router
+    }
+    
     func storeRequest(name: String, id: Int) -> Void{
+        router?.navigateToGetScreen()
         print(name)
         let data = User(value: ["id": id, "name": name])
         do{
